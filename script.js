@@ -1,3 +1,5 @@
+const GAMES = 5;
+
 // This function select a random choice between Rock, Paper and Scissors
 function getComputerChoice() {
   const hand = ["rock", "paper", "scissors"];
@@ -19,7 +21,7 @@ function singleRound(playerSelection, computerChoice) {
   } else if (player !== "rock" && player !== "paper" && player !== "scissors") {
     return "Enter a valid value!!";
   } else if (player === "rock" && computer === "paper") {
-    return "You Lose! Paper beats Rock!!";
+    return "You Lost! Paper beats Rock!!";
   } else if (player === "rock" && computer === "scissors") {
     return "You Win! Rock beats Scissors!!";
   } else if (player === "paper" && computer === "rock") {
@@ -33,7 +35,36 @@ function singleRound(playerSelection, computerChoice) {
   }
 }
 
-let playerChoice = prompt("Rock, Paper or Scissors?:");
-let computerChoice = getComputerChoice();
+// This function plays 5 rounds of the game
+function game() {
+  let playerWins = 0;
+  let computerWins = 0;
 
-console.log(singleRound(playerChoice, computerChoice));
+  for (let i = 0; i < 5; i++) {
+    let playerChoice = prompt("Rock, Paper or Scissors?:");
+    let computerChoice = getComputerChoice();
+
+    let result = singleRound(playerChoice, computerChoice);
+    console.log(result);
+    if (result.split(" ")[1] === "Win!") {
+      playerWins++;
+    } else if (result.split(" ")[1] === "Lost!") {
+      computerWins++;
+    }
+
+    console.log("____________________________________");
+    console.log("Points:");
+    console.log(`Player: ${playerWins}`);
+    console.log(`Computer: ${computerWins}`);
+  }
+
+  if (playerWins > computerWins) {
+    return "You Win the Game!!!";
+  } else if (playerWins == computerWins) {
+    return "It's a Tie!!!";
+  } else if (playerWins < computerWins) {
+    return "You Lost the Game!!!";
+  }
+}
+
+console.log(game());
