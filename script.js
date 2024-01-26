@@ -1,11 +1,11 @@
 const GAMES = 5;
+const HAND = ["rock", "paper", "scissors", "lizard", "spock"];
 
 // This function select a random choice between Rock, Paper and Scissors
 function getComputerChoice() {
-  const hand = ["rock", "paper", "scissors"];
-  let ranNum = Math.floor(Math.random() * hand.length);
+  let ranNum = Math.floor(Math.random() * HAND.length);
 
-  return hand[ranNum];
+  return HAND[ranNum];
 }
 
 //This function plays a single round of the game
@@ -18,7 +18,7 @@ function singleRound(playerSelection, computerChoice) {
 
   if (player === computer) {
     return "Its a Tie!!";
-  } else if (player !== "rock" && player !== "paper" && player !== "scissors") {
+  } else if (!HAND.includes(player)) {
     return "Enter a valid value!!";
   } else if (player === "rock" && computer === "paper") {
     return "You Lost! Paper beats Rock!!";
@@ -32,6 +32,24 @@ function singleRound(playerSelection, computerChoice) {
     return "You Lost! Rock beats Scissors!!";
   } else if (player === "scissors" && computer === "paper") {
     return "You Win! Scissors beats Paper!!";
+    //Lizard
+  } else if (player === "lizard" && computer === "paper") {
+    return "You Win! Lizard eats Paper!!";
+  } else if (player === "lizard" && computer === "rock") {
+    return "You Lost! Rock crushes Lizard!!";
+  } else if (player === "lizard" && computer === "scissors") {
+    return "You Lost! Scissors decapitates Lizard!!";
+  } else if (player === "lizard" && computer === "spock") {
+    return "You Win! Lizard poisons Spock!!";
+    //Spock
+  } else if (player === "spock" && computer === "rock") {
+    return "You Win! Spock vaporizes Rock!!";
+  } else if (player === "spock" && computer === "paper") {
+    return "You Lost! Paper disproves Spock!!";
+  } else if (player === "spock" && computer === "scissors") {
+    return "You Win! Spock smashes Scissors!!";
+  } else if (player === "spock" && computer === "lizard") {
+    return "You Lost! Lizard poisons Spock!!";
   }
 }
 
@@ -41,15 +59,17 @@ function game() {
   let computerWins = 0;
 
   for (let i = 0; i < 5; i++) {
-    let playerChoice = prompt("Rock, Paper or Scissors?:");
+    let playerChoice = prompt("Rock, Paper, Scissors,Lizard or Spock?:");
     let computerChoice = getComputerChoice();
 
     let result = singleRound(playerChoice, computerChoice);
     console.log(result);
-    if (result.split(" ")[1] === "Win!") {
-      playerWins++;
-    } else if (result.split(" ")[1] === "Lost!") {
-      computerWins++;
+    if (result.split(" ")[2] !== "Tie!!") {
+      if (result.split(" ")[1] === "Win!") {
+        playerWins++;
+      } else if (result.split(" ")[1] === "Lost!") {
+        computerWins++;
+      }
     }
 
     console.log("____________________________________");
