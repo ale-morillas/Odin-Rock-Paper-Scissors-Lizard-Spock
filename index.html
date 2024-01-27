@@ -35,6 +35,95 @@
           </p>
         </div>
       </div>
+      <div class="game-container">
+        <!-- Player Div -->
+        <div class="player">
+          <div class="player-name">
+            <h1 id="name">Player</h1>
+          </div>
+          <div class="hands">
+            <ul class="hand-list">
+              <li>
+                <button class="hand-button">
+                  <img src="/img/rock.png" alt="rock" class="hand-item" />
+                </button>
+              </li>
+              <li>
+                <button class="hand-button">
+                  <img src="/img/paper.png" alt="paper" class="hand-item" />
+                </button>
+              </li>
+              <li>
+                <button class="hand-button">
+                  <img
+                    src="/img/scissors.png"
+                    alt="scissors"
+                    class="hand-item"
+                    id="scissors"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="hand-button">
+                  <img src="/img/lizard.png" alt="lizard" class="hand-item" />
+                </button>
+              </li>
+              <li>
+                <button class="hand-button">
+                  <img src="/img/spock.png" alt="spock" class="hand-item" />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Gameboard Div -->
+        <div class="game-board">
+          <div class="winner">
+            <h1>Player Wins!!</h1>
+          </div>
+          <div class="score">
+            <div class="score-header">Score</div>
+            <div class="score-punctuation">1 - 0</div>
+          </div>
+          <div class="status">Paper disproves Spock</div>
+          <div class="battle">
+            <div class="player-choice">
+              <img src="/img/paper.png" alt="" class="img-choice" />
+            </div>
+            <div class="computer-choice">
+              <img src="/img/spock.png" alt="" class="img-choice" />
+            </div>
+          </div>
+        </div>
+        <!-- Computer Div -->
+        <div class="computer">
+          <div class="hands">
+            <ul class="hand-list">
+              <li><img src="/img/rock.png" alt="rock" class="hand-item" /></li>
+              <li>
+                <img src="/img/paper.png" alt="paper" class="hand-item" />
+              </li>
+              <li>
+                <img
+                  src="/img/scissors.png"
+                  alt="scissors"
+                  class="hand-item"
+                  id="scissors"
+                />
+              </li>
+              <li>
+                <img src="/img/lizard.png" alt="lizard" class="hand-item" />
+              </li>
+              <li>
+                <img src="/img/spock.png" alt="spock" class="hand-item" />
+              </li>
+            </ul>
+          </div>
+          <div class="player-name">
+            <h1 id="name">Computer</h1>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

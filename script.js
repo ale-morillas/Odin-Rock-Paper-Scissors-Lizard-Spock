@@ -21,17 +21,17 @@ function singleRound(playerSelection, computerChoice) {
   } else if (!HAND.includes(player)) {
     return "Enter a valid value!!";
   } else if (player === "rock" && computer === "paper") {
-    return "You Lost! Paper beats Rock!!";
+    return "You Lost! Paper covers Rock!!";
   } else if (player === "rock" && computer === "scissors") {
-    return "You Win! Rock beats Scissors!!";
+    return "You Win! Rock crushes Scissors!!";
   } else if (player === "paper" && computer === "rock") {
-    return "You Win! Paper beats Rock!!";
+    return "You Win! Paper covers Rock!!";
   } else if (player === "paper" && computer === "scissors") {
-    return "You Lost! Scissors beats Paper!!";
+    return "You Lost! Scissors cuts Paper!!";
   } else if (player === "scissors" && computer === "rock") {
-    return "You Lost! Rock beats Scissors!!";
+    return "You Lost! Rock crushes Scissors!!";
   } else if (player === "scissors" && computer === "paper") {
-    return "You Win! Scissors beats Paper!!";
+    return "You Win! Scissors cuts Paper!!";
     //Lizard
   } else if (player === "lizard" && computer === "paper") {
     return "You Win! Lizard eats Paper!!";
@@ -59,7 +59,6 @@ function game() {
   let computerWins = 0;
 
   for (let i = 0; i < 5; i++) {
-    let playerChoice = prompt("Rock, Paper, Scissors,Lizard or Spock?:");
     let computerChoice = getComputerChoice();
 
     let result = singleRound(playerChoice, computerChoice);

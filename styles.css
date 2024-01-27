@@ -16,20 +16,20 @@
 #title {
   font-family: "Bai Jamjuree", sans-serif;
   color: rgb(210, 217, 223);
-  font-size: 86px;
+  font-size: 56px;
 }
 
 .atom-img {
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
 }
 
 .content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #423d60;
-  padding: 16px;
-  height: 80vh;
+  padding: 8px;
 }
 
 .info {
@@ -37,6 +37,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-bottom: 16px;
 }
 
 .info-rules {
@@ -47,14 +48,91 @@
 
 #rule {
   font-family: "Bai Jamjuree", sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   text-align: center;
   color: rgb(209, 216, 223);
 }
 
 #rule-second {
   font-family: "Bai Jamjuree", sans-serif;
-  font-size: 48px;
+  font-size: 36px;
   text-align: center;
   color: rgb(209, 216, 223);
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "Bai Jamjuree", sans-serif;
+  color: rgb(209, 216, 223);
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 32px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vh;
+  gap: 16px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36px;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.battle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30vh;
+  gap: 300px;
+}
+
+.computer {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 32px;
+}
+
+.hand-list {
+  list-style: none;
+}
+
+.hand-item {
+  height: 85px;
+  width: 85px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hand-item:hover {
+  transform: scale(1.2);
+}
+
+.img-choice {
+  height: 120px;
+  width: 120px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
