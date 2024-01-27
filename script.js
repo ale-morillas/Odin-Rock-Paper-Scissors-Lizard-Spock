@@ -99,7 +99,7 @@ function game() {
     winner.textContent = "";
     resetBtn.style.display = "none";
 
-    // Vuelve a habilitar los botones si es necesario
+    // Enable the buttons again
     rockBtn.disabled = false;
     paperBtn.disabled = false;
     scissorsBtn.disabled = false;
