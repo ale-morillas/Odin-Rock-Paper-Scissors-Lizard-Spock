@@ -114,9 +114,9 @@ function game() {
 
     status.textContent = result;
     selPlayerImg.style.display = "block";
-    selPlayerImg.src = "/img/rock.png";
+    selPlayerImg.src = "img/rock.png";
     selComputerImg.style.display = "block";
-    selComputerImg.src = `/img/${computerChoice}.png`;
+    selComputerImg.src = `img/${computerChoice}.png`;
 
     if (result.split(" ")[2] !== "Tie!!") {
       if (result.split(" ")[1] === "Win!") {
@@ -158,9 +158,9 @@ function game() {
 
     status.textContent = result;
     selPlayerImg.style.display = "block";
-    selPlayerImg.src = "/img/paper.png";
+    selPlayerImg.src = "img/paper.png";
     selComputerImg.style.display = "block";
-    selComputerImg.src = `/img/${computerChoice}.png`;
+    selComputerImg.src = `img/${computerChoice}.png`;
 
     if (result.split(" ")[2] !== "Tie!!") {
       if (result.split(" ")[1] === "Win!") {
@@ -202,9 +202,9 @@ function game() {
 
     status.textContent = result;
     selPlayerImg.style.display = "block";
-    selPlayerImg.src = "/img/scissors.png";
+    selPlayerImg.src = "img/scissors.png";
     selComputerImg.style.display = "block";
-    selComputerImg.src = `/img/${computerChoice}.png`;
+    selComputerImg.src = `img/${computerChoice}.png`;
 
     if (result.split(" ")[2] !== "Tie!!") {
       if (result.split(" ")[1] === "Win!") {
@@ -246,9 +246,9 @@ function game() {
 
     status.textContent = result;
     selPlayerImg.style.display = "block";
-    selPlayerImg.src = "/img/lizard.png";
+    selPlayerImg.src = "img/lizard.png";
     selComputerImg.style.display = "block";
-    selComputerImg.src = `/img/${computerChoice}.png`;
+    selComputerImg.src = `img/${computerChoice}.png`;
 
     if (result.split(" ")[2] !== "Tie!!") {
       if (result.split(" ")[1] === "Win!") {
@@ -290,9 +290,9 @@ function game() {
 
     status.textContent = result;
     selPlayerImg.style.display = "block";
-    selPlayerImg.src = "/img/spock.png";
+    selPlayerImg.src = "img/spock.png";
     selComputerImg.style.display = "block";
-    selComputerImg.src = `/img/${computerChoice}.png`;
+    selComputerImg.src = `img/${computerChoice}.png`;
 
     if (result.split(" ")[2] !== "Tie!!") {
       if (result.split(" ")[1] === "Win!") {
