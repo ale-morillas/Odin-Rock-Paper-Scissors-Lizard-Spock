@@ -44,17 +44,17 @@
           <div class="hands">
             <ul class="hand-list">
               <li>
-                <button class="hand-button">
+                <button class="hand-button" id="rock-btn">
                   <img src="/img/rock.png" alt="rock" class="hand-item" />
                 </button>
               </li>
               <li>
-                <button class="hand-button">
+                <button class="hand-button" id="paper-btn">
                   <img src="/img/paper.png" alt="paper" class="hand-item" />
                 </button>
               </li>
               <li>
-                <button class="hand-button">
+                <button class="hand-button" id="scissors-btn">
                   <img
                     src="/img/scissors.png"
                     alt="scissors"
@@ -64,37 +64,46 @@
                 </button>
               </li>
               <li>
-                <button class="hand-button">
+                <button class="hand-button" id="lizard-btn">
                   <img src="/img/lizard.png" alt="lizard" class="hand-item" />
                 </button>
               </li>
               <li>
-                <button class="hand-button">
+                <button class="hand-button" id="spock-btn">
                   <img src="/img/spock.png" alt="spock" class="hand-item" />
                 </button>
               </li>
             </ul>
           </div>
         </div>
+
         <!-- Gameboard Div -->
         <div class="game-board">
           <div class="winner">
-            <h1>Player Wins!!</h1>
+            <h1 id="win-lose"></h1>
           </div>
           <div class="score">
             <div class="score-header">Score</div>
-            <div class="score-punctuation">1 - 0</div>
+            <div class="score-punctuation">
+              <span id="player-score">0</span>
+              <span>-</span>
+              <span id="computer-score">0</span>
+            </div>
           </div>
-          <div class="status">Paper disproves Spock</div>
+          <div class="status"></div>
           <div class="battle">
             <div class="player-choice">
-              <img src="/img/paper.png" alt="" class="img-choice" />
+              <img src="" alt="" id="img-choice-player" />
             </div>
             <div class="computer-choice">
-              <img src="/img/spock.png" alt="" class="img-choice" />
+              <img src="" alt="" id="img-choice-computer" />
             </div>
           </div>
+          <div class="reset-game">
+            <button id="reset-btn">Play Again!!</button>
+          </div>
         </div>
+
         <!-- Computer Div -->
         <div class="computer">
           <div class="hands">
@@ -124,6 +133,10 @@
           </div>
         </div>
       </div>
+      <footer>
+        Copyright © 2024
+        <a href="https://github.com/ale-morillas">ale-morillas</a>
+      </footer>
     </div>
   </body>
 </html>

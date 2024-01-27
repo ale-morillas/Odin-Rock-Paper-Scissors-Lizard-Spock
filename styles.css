@@ -93,7 +93,7 @@
 .status {
   display: flex;
   justify-content: center;
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .battle {
@@ -101,7 +101,7 @@
   align-items: center;
   justify-content: space-between;
   height: 30vh;
-  gap: 300px;
+  gap: 200px;
 }
 
 .computer {
@@ -127,12 +127,52 @@
 }
 
 .img-choice {
-  height: 120px;
-  width: 120px;
+  height: 85px;
+  width: 85px;
+  display: none;
 }
 
-button {
+.hand-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+#win-lose {
+  font-size: 48px;
+  /* display: none; */
+}
+
+.reset-game {
+  margin-top: 20px;
+}
+
+#reset-btn {
+  width: 150px;
+  height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #c8c4e2;
+  background-color: #100a2b;
+  color: rgb(209, 216, 223);
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: none;
+}
+
+#reset-btn:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 22px;
+  color: rgb(209, 216, 223);
+}
+
+a {
+  color: rgb(209, 216, 223);
+  text-decoration: none;
 }
